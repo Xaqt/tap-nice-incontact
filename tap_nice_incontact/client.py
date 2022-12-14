@@ -8,17 +8,18 @@ from singer import get_logger
 LOGGER = get_logger()
 
 API_AUTH_DOMAIN = 'na1'
-API_AUTH_URI = 'https://{}.nice-incontact.com/authentication/v1/token/access-key'
-API_REFRESH_URI = 'https://{}.nice-incontact.com/public/user/refresh'
-API_BASE_URI = 'https://api-{}.nice-incontact.com/inContactAPI/services/v{}'
+API_AUTH_URI = 'https://{}.incontact.com/authentication/v1/token/access-key'
+API_REFRESH_URI = 'https://{}.incontact.com/public/user/refresh'
+API_BASE_URI = 'https://api-{}.incontact.com/inContactAPI/services/v{}'
 API_VERSION = '21.0'
 MAX_RETRIES = 5
+
 
 def log_backoff_attempt(details):
     LOGGER.info(
         "Connection error detected, triggering backoff: %d try",
         details.get("tries")
-        )
+    )
 
 
 # pylint: disable=missing-class-docstring
@@ -26,20 +27,27 @@ class NiceInContactException(Exception):
     pass
 
 # pylint: disable=missing-class-docstring
+
+
 class NiceInContact5xxException(NiceInContactException):
     pass
 
 # pylint: disable=missing-class-docstring
+
+
 class NiceInContact4xxException(NiceInContactException):
     def __init__(self, status_header=None, response=None):
         super().__init__(status_header)
         self.status_header = status_header
         self.response = response
 
+
 class NiceInContact401Exception(NiceInContact4xxException):
     pass
 
 # pylint: disable=missing-class-docstring
+
+
 class NiceInContact429Exception(NiceInContactException):
     def __init__(self, message=None, response=None):
         super().__init__(message)
@@ -47,15 +55,17 @@ class NiceInContact429Exception(NiceInContactException):
         self.response = response
 
 # pylint: disable=missing-class-docstring,too-many-instance-attributes,too-few-public-methods
+
+
 class NiceInContactClient:
     def __init__(self,
-                api_key: str = None,
-                api_secret: str = None,
-                api_cluster: str = None,
-                api_version: str = None,
-                auth_domain: str = None,
-                user_agent: str = None,
-                start_date: str = None):
+                 api_key: str = None,
+                 api_secret: str = None,
+                 api_cluster: str = None,
+                 api_version: str = None,
+                 auth_domain: str = None,
+                 user_agent: str = None,
+                 start_date: str = None):
         self.api_key = api_key
         self.api_secret = api_secret
         self.api_version = str(api_version) if api_version else API_VERSION
@@ -82,7 +92,8 @@ class NiceInContactClient:
         :param refresh_token: The refresh token from a previous request.
         """
         if refresh_token and self.refresh_expires_at <= dt.utcnow():
-            response = self.session.post(self.refresh_endpoint, json={"token": self.refresh_token})
+            response = self.session.post(self.refresh_endpoint, json={
+                                         "token": self.refresh_token})
 
             data = response.json()
 
@@ -94,7 +105,8 @@ class NiceInContactClient:
             self.access_expires_at = dt.utcnow() + \
                 timedelta(seconds=int(data.get('tokenExpirationTimeSec')) - 10)
             self.refresh_expires_at = dt.utcnow() + \
-                timedelta(seconds=int(data.get('refreshTokenExpirationTimeSec')) - 10)
+                timedelta(seconds=int(
+                    data.get('refreshTokenExpirationTimeSec')) - 10)
         elif self.access_token is None or self.access_expires_at >= dt.utcnow():
             response = self.session.post(
                 self.auth_endpoint,
@@ -106,7 +118,7 @@ class NiceInContactClient:
             if response.status_code != 200:
                 raise NiceInContactException(
                     'Non-200 response fetching NICE inContact access token'
-                    )
+                )
 
             data = response.json()
 
@@ -125,20 +137,20 @@ class NiceInContactClient:
         }
 
     @backoff.on_exception(backoff.expo,
-                        (NiceInContact5xxException,
-                        NiceInContact4xxException,
-                        NiceInContact401Exception,
-                        requests.ConnectionError),
-                        max_tries=MAX_RETRIES,
-                        factor=2,
-                        on_backoff=log_backoff_attempt)
+                          (NiceInContact5xxException,
+                           NiceInContact4xxException,
+                           NiceInContact401Exception,
+                           requests.ConnectionError),
+                          max_tries=MAX_RETRIES,
+                          factor=2,
+                          on_backoff=log_backoff_attempt)
     def _make_request(self,
-                    method: str,
-                    endpoint: str,
-                    paging: bool = False,
-                    headers: dict = None,
-                    params: dict = None,
-                    data: dict = None):
+                      method: str,
+                      endpoint: str,
+                      paging: bool = False,
+                      headers: dict = None,
+                      params: dict = None,
+                      data: dict = None):
         """
         Internal NiceInContactClient method for making HTTP requests.
 
@@ -179,7 +191,8 @@ class NiceInContactClient:
                                         params=params,
                                         data=data)
 
-        status_header = response.headers.get("icStatusDescription", response.status_code)
+        status_header = response.headers.get(
+            "icStatusDescription", response.status_code)
 
         # pylint: disable=no-else-raise
         if response.status_code >= 500:
@@ -194,7 +207,8 @@ class NiceInContactClient:
                 response.status_code)
         elif response.status_code >= 400:
             # the 'icStatusDescription' header may contain an error message instead of the body
-            status_header = response.headers.get("icStatusDescription", response.status_code)
+            status_header = response.headers.get(
+                "icStatusDescription", response.status_code)
             raise NiceInContact4xxException(status_header, response.text)
 
         if response.status_code == 204:

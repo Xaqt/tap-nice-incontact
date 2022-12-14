@@ -1,0 +1,3719 @@
+{
+  "streams": [
+    {
+      "tap_stream_id": "contacts_completed",
+      "replication_key": "lastUpdateTime",
+      "replication_method": "INCREMENTAL",
+      "key_properties": [
+        "contactId"
+      ],
+      "schema": {
+        "properties": {
+          "abandoned": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "abandonSeconds": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "ACWSeconds": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "agentId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "agentSeconds": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "callbackTime": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "campaignId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "campaignName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "confSeconds": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "contactId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "contactStart": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "dateACWWarehoused": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "dateContactWarehoused": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "dispositionNotes": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "firstName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "fromAddr": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "holdCount": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "holdSeconds": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "inQueueSeconds": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "isLogged": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "isOutbound": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "isRefused": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "isShortAbandon": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "isTakeover": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "lastName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "lastUpdateTime": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "masterContactId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "mediaType": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "mediaSubTypeId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "mediaSubTypeName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "mediaTypeName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "pointOfContactId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "pointOfContactName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "postQueueSeconds": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "preQueueSeconds": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "primaryDispositionId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "refuseReason": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "refuseTime": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "releaseSeconds": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "routingTime": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "secondaryDispositionId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "serviceLevelFlag": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "skillId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "skillName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "teamId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "teamName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "toAddr": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "totalDurationSeconds": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "transferIndicatorId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "transferIndicatorName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "isAnalyticsProcessed": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "analyticsProcessedDate": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ],
+        "additionalProperties": false
+      },
+      "stream": "contacts_completed",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "contactId"
+            ],
+            "forced-replication-method": "INCREMENTAL",
+            "valid-replication-keys": [
+              "lastUpdateTime"
+            ],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "abandoned"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "abandonSeconds"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ACWSeconds"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "agentId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "agentSeconds"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "callbackTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "campaignId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "campaignName"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "confSeconds"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "contactId"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "contactStart"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "dateACWWarehoused"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "dateContactWarehoused"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "dispositionNotes"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "firstName"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "fromAddr"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "holdCount"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "holdSeconds"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "inQueueSeconds"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "isLogged"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "isOutbound"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "isRefused"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "isShortAbandon"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "isTakeover"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "lastName"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "lastUpdateTime"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "masterContactId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "mediaType"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "mediaSubTypeId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "mediaSubTypeName"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "mediaTypeName"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "pointOfContactId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "pointOfContactName"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "postQueueSeconds"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "preQueueSeconds"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "primaryDispositionId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "refuseReason"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "refuseTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "releaseSeconds"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "routingTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "secondaryDispositionId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "serviceLevelFlag"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "skillId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "skillName"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "teamId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "teamName"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "toAddr"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "totalDurationSeconds"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "transferIndicatorId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "transferIndicatorName"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "isAnalyticsProcessed"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "analyticsProcessedDate"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "skills_summary",
+      "replication_key": "startDate",
+      "replication_method": "INCREMENTAL",
+      "key_properties": [
+        "skillId",
+        "startDate",
+        "endDate"
+      ],
+      "schema": {
+        "properties": {
+          "startDate": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "endDate": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "businessUnitId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "businessUnitName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "abandonCount": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "abandonRate": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "agentsAcw": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "agentsAvailable": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "agentsIdle": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "agentsLoggedIn": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "agentsUnavailable": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "agentsWorking": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "averageHandleTime": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "averageInqueueTime": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "averageSpeedToAnswer": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "averageTalkTime": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "averageWrapTime": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "campaignId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "campaignName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "contactsActive": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "contactsHandled": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "contactsOffered": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "contactsQueued": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "contactsOutOfSLA": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "contactsWithinSLA": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "holdTime": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "isOutbound": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "longestQueueDur": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "mediaTypeId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "mediaTypeName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "queueCount": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "serviceLevel": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "skillName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "skillId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "serviceLevelGoal": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "serviceLevelThreshold": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "totalContactTime": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "dials": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "connects": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "connectsAHT": {
+            "format": "singer.decimal",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "rightPartyConnects": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "rightPartyConnectsAHT": {
+            "format": "singer.decimal",
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ],
+        "additionalProperties": false
+      },
+      "stream": "skills_summary",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "skillId",
+              "startDate",
+              "endDate"
+            ],
+            "forced-replication-method": "INCREMENTAL",
+            "valid-replication-keys": [
+              "startDate",
+              "endDate"
+            ],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "startDate"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "endDate"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "businessUnitId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "businessUnitName"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "abandonCount"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "abandonRate"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "agentsAcw"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "agentsAvailable"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "agentsIdle"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "agentsLoggedIn"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "agentsUnavailable"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "agentsWorking"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "averageHandleTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "averageInqueueTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "averageSpeedToAnswer"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "averageTalkTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "averageWrapTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "campaignId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "campaignName"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "contactsActive"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "contactsHandled"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "contactsOffered"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "contactsQueued"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "contactsOutOfSLA"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "contactsWithinSLA"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "holdTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "isOutbound"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "longestQueueDur"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "mediaTypeId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "mediaTypeName"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "queueCount"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "serviceLevel"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "skillName"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "skillId"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "serviceLevelGoal"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "serviceLevelThreshold"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "totalContactTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "dials"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "connects"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "connectsAHT"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "rightPartyConnects"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "rightPartyConnectsAHT"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "skills_sla_summary",
+      "replication_key": "startDate",
+      "replication_method": "INCREMENTAL",
+      "key_properties": [
+        "skillId",
+        "startDate",
+        "endDate"
+      ],
+      "schema": {
+        "properties": {
+          "startDate": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "endDate": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "businessUnitId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "skillId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "skillName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "contactsWithinSLA": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "contactsOutOfSLA": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "totalContacts": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "serviceLevel": {
+            "format": "singer.decimal",
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ]
+      },
+      "stream": "skills_sla_summary",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "skillId",
+              "startDate",
+              "endDate"
+            ],
+            "forced-replication-method": "INCREMENTAL",
+            "valid-replication-keys": [
+              "startDate",
+              "endDate"
+            ],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "startDate"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "endDate"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "businessUnitId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "skillId"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "skillName"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "contactsWithinSLA"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "contactsOutOfSLA"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "totalContacts"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "serviceLevel"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "teams_performance_total",
+      "replication_key": "startDate",
+      "replication_method": "INCREMENTAL",
+      "key_properties": [
+        "teamId",
+        "startDate",
+        "endDate"
+      ],
+      "schema": {
+        "properties": {
+          "startDate": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "endDate": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "teamId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "agentOffered": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "inboundHandled": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "inboundTime": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "inboundTalkTime": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "inboundAvgTalkTime": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "outboundHandled": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "outboundTime": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "outboundTalkTime": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "outboundAvgTalkTime": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "totalHandled": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "totalAvgHandled": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "totalTalkTime": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "totalAvgTalkTime": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "totalAvgHandleTime": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "consultTime": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "availableTime": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "unavailableTime": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "avgAvailableTime": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "avgUnavailableTime": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "acwTime": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "refused": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "percentRefused": {
+            "format": "singer.decimal",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "loginTime": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "workingRate": {
+            "format": "singer.decimal",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "occupancy": {
+            "format": "singer.decimal",
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ],
+        "additionalProperties": false
+      },
+      "stream": "teams_performance_total",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "teamId",
+              "startDate",
+              "endDate"
+            ],
+            "forced-replication-method": "INCREMENTAL",
+            "valid-replication-keys": [
+              "startDate",
+              "endDate"
+            ],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "startDate"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "endDate"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "teamId"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "agentOffered"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "inboundHandled"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "inboundTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "inboundTalkTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "inboundAvgTalkTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "outboundHandled"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "outboundTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "outboundTalkTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "outboundAvgTalkTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "totalHandled"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "totalAvgHandled"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "totalTalkTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "totalAvgTalkTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "totalAvgHandleTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "consultTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "availableTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "unavailableTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "avgAvailableTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "avgUnavailableTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "acwTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "refused"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "percentRefused"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "loginTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "workingRate"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "occupancy"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "wfm_skills_contacts",
+      "replication_key": "startDate",
+      "replication_method": "INCREMENTAL",
+      "key_properties": [
+        "skillId",
+        "intervalStartDate"
+      ],
+      "schema": {
+        "properties": {
+          "startDate": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "endDate": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "businessUnitId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "businessUnitName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "intervalStartDate": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "skillId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "skillName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "serviceLevel": {
+            "format": "singer.decimal",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "mediaTypeId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "mediaTypeName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "totalContacts": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "totalHandled": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "averageHandleTime": {
+            "format": "singer.decimal",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "abandonCount": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "averageSpeedOfAnswer": {
+            "format": "singer.decimal",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "totalContactTime": {
+            "format": "singer.decimal",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "isOutbound": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ],
+        "additionalProperties": false
+      },
+      "stream": "wfm_skills_contacts",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "skillId",
+              "intervalStartDate"
+            ],
+            "forced-replication-method": "INCREMENTAL",
+            "valid-replication-keys": [
+              "startDate",
+              "endDate"
+            ],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "startDate"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "endDate"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "businessUnitId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "businessUnitName"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "intervalStartDate"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "skillId"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "skillName"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "serviceLevel"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "mediaTypeId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "mediaTypeName"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "totalContacts"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "totalHandled"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "averageHandleTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "abandonCount"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "averageSpeedOfAnswer"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "totalContactTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "isOutbound"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "wfm_skills_dialer_contacts",
+      "replication_key": "startDate",
+      "replication_method": "INCREMENTAL",
+      "key_properties": [
+        "skillId",
+        "intervalStartDate"
+      ],
+      "schema": {
+        "properties": {
+          "startDate": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "endDate": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "businessUnitId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "businessUnitName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "intervalStartDate": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "skillId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "skillName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "mediaTypeId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "mediaTypeName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "dials": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "connects": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "connectsAHT": {
+            "format": "singer.decimal",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "rightPartyConnects": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "rightPartyConnectsAHT": {
+            "format": "singer.decimal",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "abandons": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ],
+        "additionalProperties": false
+      },
+      "stream": "wfm_skills_dialer_contacts",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "skillId",
+              "intervalStartDate"
+            ],
+            "forced-replication-method": "INCREMENTAL",
+            "valid-replication-keys": [
+              "startDate",
+              "endDate"
+            ],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "startDate"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "endDate"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "businessUnitId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "businessUnitName"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "intervalStartDate"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "skillId"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "skillName"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "mediaTypeId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "mediaTypeName"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "dials"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "connects"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "connectsAHT"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "rightPartyConnects"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "rightPartyConnectsAHT"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "abandons"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "wfm_skills_agent_performance",
+      "replication_key": "startDate",
+      "replication_method": "INCREMENTAL",
+      "key_properties": [
+        "skillId",
+        "agentId",
+        "halfHour"
+      ],
+      "schema": {
+        "properties": {
+          "startDate": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "endDate": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "businessUnitId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "businessUnitName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "skillId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "skillName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "agentId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "firstName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "lastName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "halfHour": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "totalHandled": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "totalHandledTime": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "totalACWTime": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ],
+        "additionalProperties": false
+      },
+      "stream": "wfm_skills_agent_performance",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "skillId",
+              "agentId",
+              "halfHour"
+            ],
+            "forced-replication-method": "INCREMENTAL",
+            "valid-replication-keys": [
+              "startDate",
+              "endDate"
+            ],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "startDate"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "endDate"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "businessUnitId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "businessUnitName"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "skillId"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "skillName"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "agentId"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "firstName"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "lastName"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "halfHour"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "totalHandled"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "totalHandledTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "totalACWTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "wfm_agents",
+      "replication_key": "startDate",
+      "replication_method": "INCREMENTAL",
+      "key_properties": [
+        "agentId",
+        "modDateTime"
+      ],
+      "schema": {
+        "properties": {
+          "startDate": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "endDate": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "agentId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "teamName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "teamId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "businessUnitId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "businessUnitName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "firstName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "middleName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "lastName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "status": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "createDate": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "modDateTime": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "productId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "ntLoginName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ],
+        "additionalProperties": false
+      },
+      "stream": "wfm_agents",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "agentId",
+              "modDateTime"
+            ],
+            "forced-replication-method": "INCREMENTAL",
+            "valid-replication-keys": [
+              "startDate",
+              "endDate"
+            ],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "startDate"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "endDate"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "agentId"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "teamName"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "teamId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "businessUnitId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "businessUnitName"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "firstName"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "middleName"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "lastName"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "status"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "createDate"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "modDateTime"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "productId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ntLoginName"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "wfm_agents_schedule_adherence",
+      "replication_key": "startDate",
+      "replication_method": "INCREMENTAL",
+      "key_properties": [
+        "agentId",
+        "agentStateId",
+        "startDate"
+      ],
+      "schema": {
+        "properties": {
+          "callStartDate": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "callEndDate": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "businessUnitId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "businessUnitName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "agentId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "stateIndex": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "startDate": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "agentStateId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "agentSessionId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "skillId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "outStateId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "outStateDescription": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "duration": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ],
+        "additionalProperties": false
+      },
+      "stream": "wfm_agents_schedule_adherence",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "agentId",
+              "agentStateId",
+              "startDate"
+            ],
+            "forced-replication-method": "INCREMENTAL",
+            "valid-replication-keys": [
+              "startDate",
+              "callEndDate"
+            ],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "callStartDate"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "callEndDate"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "businessUnitId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "businessUnitName"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "agentId"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "stateIndex"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "startDate"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "agentStateId"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "agentSessionId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "skillId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "outStateId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "outStateDescription"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "duration"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "wfm_agents_scorecards",
+      "replication_key": "startDate",
+      "replication_method": "INCREMENTAL",
+      "key_properties": [
+        "agentId",
+        "startDate"
+      ],
+      "schema": {
+        "properties": {
+          "callStartDate": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "callEndDate": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "businessUnitId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "agentId": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "startDate": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "totalTime": {
+            "format": "singer.decimal",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "talkTime": {
+            "format": "singer.decimal",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "acwTime": {
+            "format": "singer.decimal",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "holdTime": {
+            "format": "singer.decimal",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "totalCalls": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "abandonedCalls": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "auxTime": {
+            "format": "singer.decimal",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "auxInTime": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "auxOutTime": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "idleTime": {
+            "format": "singer.decimal",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "actualCalls": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ],
+        "additionalProperties": false
+      },
+      "stream": "wfm_agents_scorecards",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "table-key-properties": [
+              "agentId",
+              "startDate"
+            ],
+            "forced-replication-method": "INCREMENTAL",
+            "valid-replication-keys": [
+              "startDate",
+              "callEndDate"
+            ],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "callStartDate"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "callEndDate"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "businessUnitId"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "agentId"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "startDate"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "totalTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "talkTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "acwTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "holdTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "totalCalls"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "abandonedCalls"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "auxTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "auxInTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "auxOutTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "idleTime"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "actualCalls"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    }
+  ]
+}
