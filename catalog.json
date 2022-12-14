@@ -4,7 +4,6 @@
       "tap_stream_id": "contacts_completed",
       "replication_key": "lastUpdateTime",
       "replication_method": "FULL_TABLE",
-      "selected": true,
       "key_properties": ["contactId"],
       "schema": {
         "properties": {
@@ -182,13 +181,15 @@
             "table-key-properties": ["contactId"],
             "forced-replication-method": "FULL_TABLE",
             "valid-replication-keys": ["lastUpdateTime"],
-            "inclusion": "available"
+            "inclusion": "available",
+            "selected": true
           }
         },
         {
           "breadcrumb": ["properties", "abandoned"],
           "metadata": {
-            "inclusion": "available"
+            "inclusion": "available",
+            "selected": true
           }
         },
         {
