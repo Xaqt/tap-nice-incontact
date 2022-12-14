@@ -4,6 +4,7 @@
       "tap_stream_id": "contacts_completed",
       "replication_key": "lastUpdateTime",
       "replication_method": "FULL_TABLE",
+      "selected": true,
       "key_properties": ["contactId"],
       "schema": {
         "properties": {
@@ -502,6 +503,7 @@
       "tap_stream_id": "skills_summary",
       "replication_key": "startDate",
       "replication_method": "FULL_TABLE",
+      "selected": true,
       "key_properties": ["skillId", "startDate", "endDate"],
       "schema": {
         "properties": {
@@ -908,6 +910,7 @@
       "tap_stream_id": "skills_sla_summary",
       "replication_key": "startDate",
       "replication_method": "FULL_TABLE",
+      "selected": true,
       "key_properties": ["skillId", "startDate", "endDate"],
       "schema": {
         "properties": {
@@ -1015,6 +1018,7 @@
       "tap_stream_id": "teams_performance_total",
       "replication_key": "startDate",
       "replication_method": "FULL_TABLE",
+      "selected": true,
       "key_properties": ["teamId", "startDate", "endDate"],
       "schema": {
         "properties": {
@@ -1296,6 +1300,7 @@
       "tap_stream_id": "wfm_skills_contacts",
       "replication_key": "startDate",
       "replication_method": "FULL_TABLE",
+      "selected": true,
       "key_properties": ["skillId", "intervalStartDate"],
       "schema": {
         "properties": {
@@ -1480,6 +1485,7 @@
       "tap_stream_id": "wfm_skills_dialer_contacts",
       "replication_key": "startDate",
       "replication_method": "FULL_TABLE",
+      "selected": true,
       "key_properties": ["skillId", "intervalStartDate"],
       "schema": {
         "properties": {
@@ -1644,6 +1650,7 @@
       "tap_stream_id": "wfm_skills_agent_performance",
       "replication_key": "startDate",
       "replication_method": "FULL_TABLE",
+      "selected": true,
       "key_properties": ["skillId", "agentId", "halfHour"],
       "schema": {
         "properties": {
@@ -1788,6 +1795,7 @@
       "tap_stream_id": "wfm_agents",
       "replication_key": "startDate",
       "replication_method": "FULL_TABLE",
+      "selected": true,
       "key_properties": ["agentId", "modDateTime"],
       "schema": {
         "properties": {
@@ -1951,6 +1959,7 @@
       "tap_stream_id": "wfm_agents_schedule_adherence",
       "replication_key": "startDate",
       "replication_method": "FULL_TABLE",
+      "selected": true,
       "key_properties": ["agentId", "agentStateId", "startDate"],
       "schema": {
         "properties": {
@@ -2095,6 +2104,7 @@
       "tap_stream_id": "wfm_agents_scorecards",
       "replication_key": "startDate",
       "replication_method": "FULL_TABLE",
+      "selected": true,
       "key_properties": ["agentId", "startDate"],
       "schema": {
         "properties": {
