@@ -114,7 +114,7 @@ class NiceInContactClient:
                     "accessKeyId": self.api_key,
                     "accessKeySecret": self.api_secret
                 })
-
+            print(response)
             if response.status_code != 200:
                 raise NiceInContactException(
                     'Non-200 response fetching NICE inContact access token'
