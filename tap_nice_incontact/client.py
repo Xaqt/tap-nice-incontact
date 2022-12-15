@@ -10,8 +10,8 @@ LOGGER = get_logger()
 API_AUTH_DOMAIN = 'na1'
 API_AUTH_URI = 'https://api.incontact.com/InContactAuthorizationServer/token/access-key'
 API_REFRESH_URI = 'https://api-b2.incontact.com/public/user/refresh'
-API_BASE_URI = 'https://api-b2.incontact.com/inContactAPI/services/v22.0'
-API_VERSION = '22.0'
+API_BASE_URI = 'https://api-b2.incontact.com/inContactAPI/services/v24.0'
+API_VERSION = '24.0'
 MAX_RETRIES = 5
 
 
