@@ -12,6 +12,7 @@ from tap_nice_incontact.transform import convert_data_types, transform_iso8601_d
 
 LOGGER = singer.get_logger()
 
+
 class BaseStream:
     """
     A base class representing singer streams.
@@ -47,7 +48,8 @@ class BaseStream:
             that is returned for a child stream to consume
         :return: list of records
         """
-        raise NotImplementedError("Child classes of BaseStream require implementation")
+        raise NotImplementedError(
+            "Child classes of BaseStream require implementation")
 
     def get_parent_data(self, config: dict = None) -> list:
         """
@@ -57,7 +59,8 @@ class BaseStream:
         :return: A list of records
         """
         if not self.parent:
-            raise NotImplementedError("Child classes of BaseStream need to set the parent class")
+            raise NotImplementedError(
+                "Child classes of BaseStream need to set the parent class")
         # pylint: disable=not-callable
         parent = self.parent(self.client)
         return parent.get_records(config, is_parent=True)
@@ -82,17 +85,20 @@ class BaseStream:
         if period == 'days':
             for day in range(1, (end_date - start_date).days + 1):
                 new_end = start_date + timedelta(days=day)
-                date_list.append((utils.strftime(new_start), utils.strftime(new_end)))
+                date_list.append(
+                    (utils.strftime(new_start), utils.strftime(new_end)))
                 new_start = new_end
         elif period == 'hours':
             for hour in range(1, int((end_date - start_date) / timedelta(hours=1)) + 1):
                 new_end = (start_date + timedelta(hours=hour))
-                date_list.append((utils.strftime(new_start), utils.strftime(new_end)))
+                date_list.append(
+                    (utils.strftime(new_start), utils.strftime(new_end)))
                 new_start = new_end
         elif period == 'minutes':
             for minutes in range(5, int((end_date - start_date) / timedelta(minutes=1)) + 5, 5):
                 new_end = start_date + timedelta(minutes=minutes)
-                date_list.append((utils.strftime(new_start), utils.strftime(new_end)))
+                date_list.append(
+                    (utils.strftime(new_start), utils.strftime(new_end)))
                 new_start = new_end
 
         yield from date_list
@@ -121,11 +127,11 @@ class IncrementalStream(BaseStream):
     batched = False
 
     def sync(self,
-            state: dict,
-            stream_schema: dict,
-            stream_metadata: dict,
-            config: dict,
-            transformer: Transformer) -> dict:
+             state: dict,
+             stream_schema: dict,
+             stream_metadata: dict,
+             config: dict,
+             transformer: Transformer) -> dict:
         """
         The sync logic for an incremental stream.
 
@@ -137,9 +143,9 @@ class IncrementalStream(BaseStream):
         :return: State data in the form of a dictionary
         """
         start_date = singer.get_bookmark(state,
-                                        self.tap_stream_id,
-                                        self.replication_key,
-                                        config['start_date'])
+                                         self.tap_stream_id,
+                                         self.replication_key,
+                                         config['start_date'])
         bookmark_datetime = singer.utils.strptime_to_utc(start_date)
         max_datetime = bookmark_datetime
 
@@ -148,9 +154,11 @@ class IncrementalStream(BaseStream):
                 if self.convert_data_types:
                     record = convert_data_types(record, stream_schema)
 
-                transformed_record = transformer.transform(record, stream_schema, stream_metadata)
+                transformed_record = transformer.transform(
+                    record, stream_schema, stream_metadata)
                 # pylint: disable=line-too-long
-                record_datetime = singer.utils.strptime_to_utc(transformed_record[self.replication_key])
+                record_datetime = singer.utils.strptime_to_utc(
+                    transformed_record[self.replication_key])
                 if record_datetime >= bookmark_datetime:
                     singer.write_record(self.tap_stream_id, transformed_record)
                     counter.increment()
@@ -159,9 +167,9 @@ class IncrementalStream(BaseStream):
             bookmark_date = singer.utils.strftime(max_datetime)
 
         state = singer.write_bookmark(state,
-                                    self.tap_stream_id,
-                                    self.replication_key,
-                                    bookmark_date)
+                                      self.tap_stream_id,
+                                      self.replication_key,
+                                      bookmark_date)
         singer.write_state(state)
         return state
 
@@ -176,11 +184,11 @@ class FullTableStream(BaseStream):
     replication_method = 'FULL_TABLE'
 
     def sync(self,
-            state: dict,
-            stream_schema: dict,
-            stream_metadata: dict,
-            config: dict,
-            transformer: Transformer) -> dict:
+             state: dict,
+             stream_schema: dict,
+             stream_metadata: dict,
+             config: dict,
+             transformer: Transformer) -> dict:
         """
         The sync logic for an full table stream.
 
@@ -193,7 +201,8 @@ class FullTableStream(BaseStream):
         """
         with metrics.record_counter(self.tap_stream_id) as counter:
             for record in self.get_records(config):
-                transformed_record = transformer.transform(record, stream_schema, stream_metadata)
+                transformed_record = transformer.transform(
+                    record, stream_schema, stream_metadata)
                 singer.write_record(self.tap_stream_id, transformed_record)
                 counter.increment()
 
@@ -211,21 +220,22 @@ class ContactsCompleted(IncrementalStream):
     key_properties = ['contactId']
     path = 'contacts/completed'
     replication_key = 'lastUpdateTime'
-    valid_replication_keys = ['lastUpdateTime'] # `lastPollTime` is suggested by the Docs to be used in subsequent requests
+    # `lastPollTime` is suggested by the Docs to be used in subsequent requests
+    valid_replication_keys = ['lastUpdateTime']
     data_key = 'completedContacts'
 
     def get_records(self,
                     config: dict = None,
                     bookmark_datetime: datetime = None,
                     is_parent: bool = False) -> Iterator[list]:
-        bookmark_datetime = self.check_start_date(bookmark_datetime, 30)
+        # bookmark_datetime = self.check_start_date(bookmark_datetime, 30)
         records = True
-        skip = 0
+        skip = 1
 
         # API is limited to 10K records per response, use skip param to get all records
         while records:
             params = {
-                "updatedSince": bookmark_datetime.isoformat(),
+                # "updatedSince": bookmark_datetime.isoformat(),
                 "orderBy": self.replication_key + ' asc',
                 "skip": skip
             }
@@ -303,14 +313,15 @@ class SkillsSLASummary(IncrementalStream):
         for start, end in self.generate_date_range(bookmark_datetime, period=period):
             endpoint = self.path
             params = {
-                    "startDate": start,
-                    "endDate": end
-                }
+                "startDate": start,
+                "endDate": end
+            }
             paging = False
             next_page = True
 
             while next_page:
-                results = self.client.get(endpoint, paging=paging, params=params)
+                results = self.client.get(
+                    endpoint, paging=paging, params=params)
 
                 if '_links' in results and results.get('_links', {}).get('next'):
                     paging = True
@@ -321,7 +332,7 @@ class SkillsSLASummary(IncrementalStream):
 
                 LOGGER.info('API call for {} stream returned {:d} records'.format(
                     self.tap_stream_id, results.get('totalRecords'))
-                    )
+                )
 
                 # add `startDate` and `endDate` to each record
                 yield from (dict(rec, **{"startDate": start, "endDate": end})
@@ -424,6 +435,7 @@ class WFMSkillsDialerContacts(IncrementalStream):
 
             # add `startDate` and `endDate` to each record
             yield from (dict(rec, **params) for rec in results.get(self.data_key))
+
 
 class WFMSkillsAgentPerformance(IncrementalStream):
     """
