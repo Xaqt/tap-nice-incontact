@@ -228,14 +228,14 @@ class ContactsCompleted(IncrementalStream):
                     config: dict = None,
                     bookmark_datetime: datetime = None,
                     is_parent: bool = False) -> Iterator[list]:
-        # bookmark_datetime = self.check_start_date(bookmark_datetime, 30)
+        bookmark_datetime = self.check_start_date(bookmark_datetime, 30)
         records = True
-        skip = 1
+        skip = 0
 
         # API is limited to 10K records per response, use skip param to get all records
         while records:
             params = {
-                # "updatedSince": bookmark_datetime.isoformat(),
+                "updatedSince": '2017-12-15 15:22:00',
                 "orderBy": self.replication_key + ' asc',
                 "skip": skip
             }
