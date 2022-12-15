@@ -27,7 +27,8 @@ def convert_data_types(data: dict, schema: dict) -> dict:
             raise SchemaMismatch([error_message, schema])
 
         if 'integer' in field_prop.get('type') and not isinstance(value, int):
-            value = null
+            # change later..
+            value = 0
 
         if field_prop.get('format') == 'singer.decimal' and not isinstance(value, str):
             value = str(value)
