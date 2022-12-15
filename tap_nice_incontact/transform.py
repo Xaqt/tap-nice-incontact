@@ -28,7 +28,7 @@ def convert_data_types(data: dict, schema: dict) -> dict:
 
         if 'integer' in field_prop.get('type') and not isinstance(value, int):
             # change later..
-            value = 0
+            value = '0'
 
         if field_prop.get('format') == 'singer.decimal' and not isinstance(value, str):
             value = str(value)
