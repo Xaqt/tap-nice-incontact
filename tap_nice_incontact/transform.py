@@ -22,11 +22,12 @@ def convert_data_types(data: dict, schema: dict) -> dict:
         field_prop = schema.get('properties', {}).get(field)
 
         if field not in schema.get('properties').keys():
-            error_message.append(f'{field}: does not match: {field_prop.get("type")}')
+            error_message.append(
+                f'{field}: does not match: {field_prop.get("type")}')
             raise SchemaMismatch([error_message, schema])
 
         if 'integer' in field_prop.get('type') and not isinstance(value, int):
-            value = int(value)
+            value = int(float(value))
 
         if field_prop.get('format') == 'singer.decimal' and not isinstance(value, str):
             value = str(value)
@@ -37,6 +38,7 @@ def convert_data_types(data: dict, schema: dict) -> dict:
         converted_data.update({field: value})
 
     return converted_data
+
 
 def transform_iso8601_durations(data: list) -> list:
     """
