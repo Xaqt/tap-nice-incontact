@@ -10,11 +10,12 @@ LOGGER = get_logger()
 
 API_AUTH_DOMAIN = 'na1'
 # wakeco api_auth_uri
-API_AUTH_URI = 'https://{}.nice-incontact.com/authentication/v1/token/access-key'
+
+API_AUTH_URI = 'https://api.incontact.com/InContactAuthorizationServer/token/access-key'
 # xaqt api_auth_uri
 # API_AUTH_URI = 'https://api.incontact.com/InContactAuthorizationServer/token/access-key'
 API_REFRESH_URI = 'https://api-{}.incontact.com/public/user/refresh'
-API_BASE_URI = 'https://api-{}.incontact.com/inContactAPI/services/v{}'
+API_BASE_URI = 'https://api-c7.incontact.com/inContactAPI/services/v25.0'
 API_VERSION = '24.0'
 MAX_RETRIES = 5
 
