@@ -14,8 +14,8 @@ API_AUTH_DOMAIN = 'na1'
 API_AUTH_URI = 'https://api.incontact.com/InContactAuthorizationServer/token/access-key'
 # xaqt api_auth_uri
 # API_AUTH_URI = 'https://api.incontact.com/InContactAuthorizationServer/token/access-key'
-API_REFRESH_URI = 'https://api-b2.incontact.com/public/user/refresh'
-API_BASE_URI = 'https://api-b2.incontact.com/inContactAPI/services/v25.0'
+API_REFRESH_URI = 'https://api-c7.incontact.com/public/user/refresh'
+API_BASE_URI = 'https://api-c7.incontact.com/inContactAPI/services/v25.0'
 API_VERSION = '25.0'
 MAX_RETRIES = 5
 
